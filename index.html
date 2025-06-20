@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THERASYX - La Téléportation Révolutionnaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6e00ff 0%, #00d4ff 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #6e00ff;
+        }
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid #6e00ff;
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+            max-width: 100vw;
+            word-break: break-word;
+        }
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: #6e00ff; }
+        }
+        @media (max-width: 640px) {
+            .typewriter {
+                font-size: 1.5rem !important;
+                white-space: normal;
+                border-right: none;
+                animation: none;
+            }
+            .typewriter span {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i class="fas fa-atom text-purple-600 text-2xl mr-2"></i>
+                        <span class="text-xl font-bold text-purple-600">THERASYX</span>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Le Projet</a>
+                    <a href="#prototype" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Prototype</a>
+                    <a href="#creator" class="text-gray-700 hover:text-purple-600 px-3 py-2 text-sm font-medium">Créateur</a>
+                    <a href="#contact" class="bg-purple-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-purple-700 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-700 hover:text-purple-600 hover:bg-gray-100 focus:outline-none">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div class="mobile-menu hidden md:hidden bg-white">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">Le Projet</a>
+                <a href="#prototype" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">Prototype</a>
+                <a href="#creator" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-purple-600 hover:bg-gray-50">Créateur</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-white bg-purple-600 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 md:py-32">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                        <span class="typewriter break-words">
+                            <!-- Tablet and PC only -->
+                            <span class="hidden sm:block">
+                                RÉINVENTER LA TÉLÉPORTATION
+                            </span>
+                        </span>
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">THERASYX repousse les limites de la physique quantique pour créer le premier système de téléportation de la matière accessible.</p>
+                    <div class="flex space-x-4">
+                        <a href="#prototype" class="bg-white text-purple-600 px-6 py-3 rounded-md font-medium hover:bg-gray-100 transition">Voir le prototype</a>
+                        <a href="#about" class="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-purple-600 transition">En savoir plus</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex justify-end -mt-8">
+                <div class="relative w-full max-w-md mr-8">
+                    <div class="absolute -top-6 -left-6 w-32 h-32 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
+                    <div class="absolute -bottom-8 -right-6 w-32 h-32 bg-blue-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                    <div class="relative">
+                        <img src="images/prototype.jpg" alt="Teleportation concept" class="rounded-xl shadow-2xl border-4 border-white">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Project Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">LE PROJET THERASYX</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Une révolution dans le domaine du transport qui promet de changer fondamentalement notre façon de nous déplacer et d'interagir avec l'espace.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-atom text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Principe Quantique</h3>
+                    <p class="text-gray-600">Utilisation de la synchronisation quantique pour teleporter la matière d'un point à un autre sans traverser l'espace intermédiaire.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-microchip text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Technologie Propriétaire</h3>
+                    <p class="text-gray-600">Notre système synchronisation quantique permet des téléportations stables et reproductibles à des distances croissantes.</p>
+                </div>
+                
+                <div class="bg-gray-50 p-8 rounded-xl card-hover">
+                    <div class="text-purple-600 mb-4">
+                        <i class="fas fa-globe-africa text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Impact Africain</h3>
+                    <p class="text-gray-600">Développé en Afrique pour le monde, THERASYX représente l'innovation africaine au plus haut niveau technologique.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prototype Section -->
+    <section id="prototype" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">NOTRE PROTOTYPE</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Découvrez les premières démonstrations de notre technologie révolutionnaire.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+                <div class="video-container rounded-xl overflow-hidden shadow-lg">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold mb-4">Première téléportation réussie</h3>
+                    <p class="text-gray-600 mb-4">Cette vidéo montre notre première démonstration réussie de téléportation quantique.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Quantique</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">Molécule</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">1 mètre</span>
+                        <span class="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-sm">2025</span>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-8 text-center">Galerie Photo</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="images/appercu.jpg" alt="interieur" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600">le petit cablage du prototype</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="images/module.jpg" alt="Quantum computer" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600">Le module qui permet la synchronisation et piloter THERASYX</p>
+                    </div>
+                </div>
+                <div class="rounded-xl overflow-hidden shadow-lg card-hover">
+                    <img src="images/amelioré.PNG" alt="Team working" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <p class="text-gray-600">version finqle du prototype(THERASYX V2)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Creator Section -->
+    <section id="creator" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">GIBRIL MADAK</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">L'incarnation de la nouvelle génération d'innovateurs africains</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center mb-16">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -inset-2 bg-purple-600 rounded-full blur opacity-75 animate-pulse"></div>
+                        <img src="images/portrait.jpg"Gibril Madak" class="relative rounded-full w-64 h-64 object-cover border-4 border-white shadow-xl">
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-bold mb-4">19 ans • Inventeur autodidacte • Visionnaire technologique</h3>
+                    <p class="text-gray-600 mb-6">Né en RDCongo, Gibril Madak a toujours été fasciné par les mystères de l'univers. Autodidacte dès son plus jeune âge, il a maîtrisé les concepts avancés de physique quantique et d'intelligence artificielle à travers des ressources en ligne et une curiosité insatiable.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-brain text-purple-600"></i>
+                            </div>
+                            <span>Génie autodidacte</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-atom text-purple-600"></i>
+                            </div>
+                            <span>Physique quantique</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-robot text-purple-600"></i>
+                            </div>
+                            <span>Intelligence Artificielle</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-purple-100 p-3 rounded-full mr-3">
+                                <i class="fas fa-lightbulb text-purple-600"></i>
+                            </div>
+                            <span>plusieurs experimentations</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-8 text-center">Son parcours extraordinaire</h3>
+            <div class="max-w-3xl mx-auto px-4 sm:px-0">
+                <div class="relative">
+                    <!-- Timeline item -->
+                    <div class="timeline-item relative pl-8 pb-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <h4 class="font-bold text-lg">2022 - Découverte de la physique quantique</h4>
+                        <p class="text-gray-600">À 15ans, Gibril découvre les principes de la mécanique quantique grace à son ami DAVID(KYLE) et à travers des vidéos en ligne ils 
+                          commencent ensemble leurs premières expériences théoriques. cela a marqué e debut d'une grande passion pour les deux amis. mais la physique
+                           n'était pas la seule chose passionnante qu'ils avaient en commun, l'ectronique, et aussi un esprit d'inventeur (ils avaientpour model LEONARD DE VINCI) 
+                           en 2024 GIBRIL se decouvre une nouvelle passion: la programmation. ils travailent ensemble avec DAVID sur MMELODY une ia destinée à etre une assistante personelle
+                            pour leurs projets, malheureusement; GIBRIL se vu sobligé de quitter la ville pour aller continuer ses études aileur et quelques mois plus tard  gibril se mit pour certaines raison à travailler sur quelque chose qui paraissait impossible à savoir: THERASYX</p>
+                    </div>
+                    
+                    <!-- Timeline item -->
+                    <div class="timeline-item relative pl-8 pb-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <h4 class="font-bold text-lg">en 2025 - Premier prototype de téléportation</h4>
+                        <p class="text-gray-600">un mois apres avoir commencé il construit son premier module expérimental.</p>
+                    </div>
+                    
+                    <!-- Timeline item -->
+                    <div class="timeline-item relative pl-8 pb-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <h4 class="font-bold text-lg">son objectif ? creation d'un reseau mondial des portails THERASYX</h4>
+                        <p class="text-gray-600">nous avons pour objectif de rendre cette technologie accessible au grand public et revolutionner le transport</p>
+                    </div>
+                    
+                    <!-- Timeline item -->
+                    <div class="timeline-item relative pl-8">
+                        <div class="absolute left-0 top-0 w-4 h-4 bg-purple-600 rounded-full"></div>
+                        <h4 class="font-bold text-lg">Lancement de THERASYX</h4>
+                        <p class="text-gray-600">il voudrait offrr aux investisseurs, scientifiques, une opportunité de partissiper à la creation du tout premier portail THERASYX à l'echelle hummaine. une occarion de mettre 
+                            votre nom en avant premiere pour unne technologie innovante 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investors Section -->
+    <section class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">REJOIGNEZ LA RÉVOLUTION THERASYX</h2>
+                <div class="w-20 h-1 bg-purple-600 mx-auto mb-6"></div>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Opportunité unique pour investisseurs et scientifiques de participer à la création du premier portail de téléportation à l'échelle humaine.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-gray-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">Pour les Investisseurs</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                            <span>Participation à une technologie révolutionnaire avec potentiel de disruption mondiale</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                            <span>Retour sur investissement exceptionnel avec droits exclusifs par région</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                            <span>Accès privilégié aux démonstrations et tests privés</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="mt-6 inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition">Devenir investisseur</a>
+                </div>
+                
+                <div class="bg-gray-800 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold mb-4 text-purple-400">Pour les Scientifiques</h3>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                            <span>Collaboration sur des recherches de pointe en physique quantique</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                            <span>Accès à nos données et équipements expérimentaux</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-purple-400 mt-1 mr-3"></i>
+                            <span>Opportunité de publier conjointement des articles scientifiques</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="mt-6 inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition">Rejoindre l'équipe</a>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-purple-900 bg-opacity-30 p-8 rounded-xl border border-purple-700">
+                <h3 class="text-2xl font-bold mb-4 text-center">Étapes du Projet</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="text-center p-4">
+                        <div class="text-4xl font-bold text-purple-400 mb-2">1</div>
+                        <h4 class="font-semibold mb-2">Prototype fonctionnel</h4>
+                        <p class="text-gray-300">Téléportation de la matière (fait✓)</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="text-4xl font-bold text-purple-400 mb-2">2</div>
+                        <h4 class="font-semibold mb-2">Portail humain</h4>
+                        <p class="text-gray-300">Première téléportation à l'echelle humaine (planifié)</p>
+                    </div>
+                    <div class="text-center p-4">
+                        <div class="text-4xl font-bold text-purple-400 mb-2">3</div>
+                        <h4 class="font-semibold mb-2">Réseau mondial</h4>
+                        <p class="text-gray-300">Déploiement d'un reseau mondial des portails publics (objectif)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-purple-600 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">CONTACTEZ-NOUS</h2>
+                <div class="w-20 h-1 bg-white mx-auto mb-6"></div>
+                <p class="text-xl opacity-90 max-w-3xl mx-auto">Vous souhaitez en savoir plus sur THERASYX, investir dans le projet ou collaborer avec notre équipe ? Envoyez-nous un message.</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-xl overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-purple-700 p-8">
+                        <h3 class="text-2xl font-bold mb-6">Informations</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-map-marker-alt mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">Adresse</h4>
+                                    <p class="text-purple-200">lubumbashi, RDCongo</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">Email</h4>
+                                    <p class="text-purple-200">gibril.therasyx@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-globe mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">Réseaux sociaux</h4>
+                                    <div class="flex space-x-4 mt-2">
+                                        <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-twitter text-xl"></i></a>
+                                        <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-linkedin text-xl"></i></a>
+                                        <a href="#" class="text-purple-200 hover:text-white"><i class="fab fa-instagram text-xl"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8 text-gray-800">
+                        <form id="contactForm">
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nom complet</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 font-medium mb-2">Message</label>
+                                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600" required></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-medium hover:bg-purple-700 transition">Envoyer le message</button>
+                            <div id="formStatus" class="mt-4 text-center"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-atom text-purple-500 mr-2"></i> THERASYX
+                    </h3>
+                    <p class="text-gray-400">Repousser les limites de la science et supprimer la contrainte temorelle.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Le Projet</a></li>
+                        <li><a href="#prototype" class="text-gray-400 hover:text-white transition">Prototype</a></li>
+                        <li><a href="#creator" class="text-gray-400 hover:text-white transition">Créateur</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Ressources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Publications</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Presse</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">THERASYX</h4>
+                    <p class="text-gray-400 mb-4">Du temps ? pas du tout !.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Votre email" class="px-4 py-2 rounded-l-lg text-gray-800 w-full focus:outline-none">
+                        <button class="bg-purple-600 px-4 py-2 rounded-r-lg hover:bg-purple-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2025 THERASYX.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Formulaire de contact AJAX
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                formStatus.textContent = 'Envoi en cours...';
+                formStatus.className = 'mt-4 text-center text-gray-700';
+                const data = {
+                    name: contactForm.name.value,
+                    email: contactForm.email.value,
+                    message: contactForm.message.value
+                };
+                try {
+                    const response = await fetch('http://localhost:3001/api/contact', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(data)
+                    });
+                    if (response.ok) {
+                        formStatus.textContent = 'Message envoyé avec succès !';
+                        formStatus.className = 'mt-4 text-center text-green-600';
+                        contactForm.reset();
+                    } else {
+                        formStatus.textContent = 'Erreur lors de l\'envoi du message.';
+                        formStatus.className = 'mt-4 text-center text-red-600';
+                    }
+                } catch (err) {
+                    formStatus.textContent = 'Erreur de connexion au serveur.';
+                    formStatus.className = 'mt-4 text-center text-red-600';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
